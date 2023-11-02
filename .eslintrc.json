@@ -1,0 +1,42 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"prettier",
+		"plugin:prettier/recommended",
+		"plugin:import/typescript",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"next"
+	],
+	"plugins": [],
+	"rules": {
+		"no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+		"tailwindcss/no-custom-classname": "off",
+		"react-hooks/rules-of-hooks": "warn",
+		"react-hooks/exhaustive-deps": "off"
+	},
+	"settings": {},
+	"parser": "@typescript-eslint/parser",
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx"],
+			"parser": "@typescript-eslint/parser",
+			"rules": {
+				"no-mixed-spaces-and-tabs": "off",
+				"@typescript-eslint/no-explicit-any": "warn"
+			}
+		},
+		{
+			"files": ["**/*.d.ts", "@types/global.ts", "apis/**/*.ts"],
+			"rules": {
+				"no-unused-vars": "off",
+				"@typescript-eslint/no-explicit-any": "off"
+			}
+		}
+	]
+}

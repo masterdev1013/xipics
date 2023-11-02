@@ -1,0 +1,21 @@
+version: "3"
+services:
+  frontend:
+    container_name: xipics_frontend
+    build:
+      context: .
+    ports:
+      - "3010:3000"
+    restart: always
+    volumes:
+      - ./public/uploads:/app/public/uploads
+  nginx:
+    container_name: xipics_nginx
+    image: nginx:alpine
+    restart: always
+    ports:
+      - "7009:80"
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - frontend

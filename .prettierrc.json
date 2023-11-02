@@ -1,0 +1,29 @@
+{
+	"endOfLine": "auto",
+	"semi": true,
+	"useTabs": true,
+	"singleQuote": false,
+	"arrowParens": "avoid",
+	"tabWidth": 2,
+	"trailingComma": "none",
+	"importOrder": [
+		"^(react/(.*)$)|^(react$)",
+		"^(next/(.*)$)|^(next$)",
+		"<THIRD_PARTY_MODULES>",
+		"",
+		"^@/config/(.*)$",
+		"^@/utils/(.*)$",
+		"^@/lib/(.*)$",
+		"^@/hooks/(.*)$",
+		"^@/components(.*)$",
+		"^@/app/(.*)$",
+		"",
+		"^[./]"
+	],
+	"importOrderSeparation": false,
+	"importOrderSortSpecifiers": true,
+	"importOrderBuiltinModulesToTop": true,
+	"importOrderParserPlugins": ["typescript", "tsx", "decorators-legacy"],
+	"importOrderMergeDuplicateImports": true,
+	"importOrderCombineTypeAndValueImports": true
+}
